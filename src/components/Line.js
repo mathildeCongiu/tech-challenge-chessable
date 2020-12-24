@@ -2,6 +2,7 @@ import React from 'react'
 
 function Line(props) {
     let numbersArray = ["","" , "","" ,"" , "","" ,"" ];
+    console.log(props)
     return (
       <div className={`line ${props.lineDirection}`}>
         {numbersArray.map((square, index) => {

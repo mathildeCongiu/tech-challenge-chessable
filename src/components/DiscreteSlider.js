@@ -15,37 +15,34 @@ const useStyles = makeStyles((theme) => ({
 const marks = [
   {
     value: 0,
-    label: '0°C',
+    label: 'Small',
   },
   {
-    value: 20,
-    label: '20°C',
+    value: 30,
+    label: 'Medium',
   },
   {
-    value: 37,
-    label: '37°C',
+    value: 70,
+    label: 'Large',
   },
   {
     value: 100,
-    label: '100°C',
+    label: 'X-large',
   },
 ];
 
-function valuetext(value) {
-  return `${value}°C`;
-}
 
-export default function DiscreteSlider() {
+export default function DiscreteSlider(props) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Typography id="discrete-slider-custom" gutterBottom>
-        Custom marks
+        Choose the size you like best
       </Typography>
       <Slider
         defaultValue={20}
-        getAriaValueText={valuetext}
+        getAriaValueText={props.valuetext}
         aria-labelledby="discrete-slider-custom"
         step={10}
         valueLabelDisplay="auto"
