@@ -1,13 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react';
 import Line from './Line';
 
 export default function Board(props) {
-    let columns = ["a","b","c","d","e","f","g","h"]
+    let columns = ["8","7","6","5","4","3","2","1"]
+
   return (
       
     <div className="board" style={{width: `${props.size}vw`, height:`${props.size}vw`}}>
         {columns.map((square, index) => {
-            return (index % 2 === 0 ? <Line lineDirection= "line-odd"  /> : <Line lineDirection= "line-even" />)
+     
+            return (index % 2 === 0 ? <Line key= {index} {...props} lineDirection= "line-even"  rank= {square} /> : <Line lineDirection="line-odd" {...props} key= {index} rank= {square}/>)
         })}
 
       </div>

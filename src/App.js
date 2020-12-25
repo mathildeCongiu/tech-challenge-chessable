@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Board from './components/Board';
 import DiscreteSlider from './components/DiscreteSlider';
@@ -7,10 +6,25 @@ import React, {useState} from 'react';
 
 function App() {
   const [size, setSize] = useState()
+  const [toggleCoordinates, setToggleCoordinates] = useState("show")
+  const [selectedSquare, setSelectedSquare] = useState()
 
   function valuetext(value) {
     setSize(value)
   return value;
+  }
+
+  const showSelectedSquare = (selectedSquare) => {
+    setSelectedSquare(selectedSquare)
+  }
+
+  const toggleCoordinatesHandler = () => {
+    if (toggleCoordinates === "show") {
+      setToggleCoordinates("hide")
+    }
+    else {
+      setToggleCoordinates("show")
+    }
   }
 
   return (
@@ -18,7 +32,7 @@ function App() {
       <h1>Board Sizer</h1>
       <div>
         <div className="nb-board" style={{height:`${size}vw`}}>
-          <div className="numbers" style={{height:"100%"}}>
+          <div className={`numbers ${toggleCoordinates}`} style={{height:"100%"}}>
             <p>8</p>
             <p>7</p>
             <p>6</p>
@@ -28,9 +42,9 @@ function App() {
             <p>2</p>
             <p>1</p>
           </div>
-          <Board size= {size}/>
+          <Board showSelectedSquare= {showSelectedSquare} size= {size}/>
         </div>
-        <div className= "coordinates">
+        <div className= {`coordinates ${toggleCoordinates}`}>
           <p>a</p>
           <p>b</p>
           <p>c</p>
@@ -44,6 +58,8 @@ function App() {
 
       </div>
       <DiscreteSlider valuetext = {valuetext}/>
+      {toggleCoordinates ==="show" ? <button onClick= {() => toggleCoordinatesHandler()}>Hide Coordinates</button> : <button onClick= {() => toggleCoordinatesHandler()}>Show Corrdinates</button>}
+      <h2>{selectedSquare}</h2>
     </div>
   );
 }

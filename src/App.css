@@ -114,3 +114,11 @@ p {
   justify-content: space-around;
   margin-right: 3px;
 }
+
+.show {
+  display:flex;
+}
+
+.hide {
+  display: none;
+}
