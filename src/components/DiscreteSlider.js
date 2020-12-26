@@ -15,14 +15,18 @@ const useStyles = makeStyles((theme) => ({
 const marks = [
   {
     value: 0,
+    label: 'None',
+  },
+  {
+    value: 20,
     label: 'Small',
   },
   {
-    value: 30,
+    value: 50,
     label: 'Medium',
   },
   {
-    value: 70,
+    value: 80,
     label: 'Large',
   },
   {
@@ -40,6 +44,7 @@ export default function DiscreteSlider(props) {
       <Typography id="discrete-slider-custom" gutterBottom>
         Choose the size you like best
       </Typography>
+      <br></br>
       <Slider
         defaultValue={20}
         getAriaValueText={props.valuetext}
