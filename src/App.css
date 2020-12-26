@@ -121,9 +121,10 @@ button {
   background-color: var(--blue);
   color: white;
   width: 50%;
-  height: 30px;
+  height: 2vw;
   border: none;
   margin-bottom: 20px;
+  font-size: 1.2vw;
 }
 
 .light-square {
@@ -214,28 +215,32 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 40%;
-  padding-top: 20px;
+  justify-content: space-evenly;
+  height: 100%;
+  padding: 5px 0;
 }
 
 .learn h2 {
-  margin: 30px
+  font-size: 1.5vw;
 }
 
-.learn p {
-  margin-bottom: 20px;
+.learn p, .learn h3 {
+  font-size: 1.2vw;
+}
+
+.learn span {
+  color: var(--blue)
 }
 
 .right-part {
 
   border: solid var(--text) 2px;
-  padding: 0 40px;
+  padding: 0 20px;
   height: 100%;
   border-radius: 20px;
 }
 
 h2 {
-  margin-bottom: 40px;
   color: var(--dark)
 }
 
