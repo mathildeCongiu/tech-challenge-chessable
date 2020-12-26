@@ -35,14 +35,14 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <li> Discover</li>
-        <li>Play</li>
+        <li onClick= {() => setPlay(false)}> Discover</li>
+        <li onClick= {() => setPlay(true)}>Play</li>
       </nav>
-      <h1>Board Sizer</h1>
+      <h1>Play my board!</h1>
       <div className="full-content">
         <div className="main-container">
           {size < 10 ? (
-            <p>
+            <p className= "error-message">
               Oups, it seems too small, make the board bigger by using the
               slider{" "}
             </p>
@@ -89,7 +89,7 @@ function App() {
           <DiscreteSlider valuetext={valuetext} />
         </div>
         {size >= 80 ? null :  
-        <div>
+        <div className= "right-part">
         {play ?  <Game userSquare={selectedSquare} playerHandler= {playerHandler}/> :         
         <Learn selectedSquare={selectedSquare} playerHandler= {playerHandler}></Learn>}
         </div>}
