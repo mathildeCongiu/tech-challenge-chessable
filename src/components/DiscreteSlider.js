@@ -5,7 +5,7 @@ import Slider from '@material-ui/core/Slider';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 300,
+    width: 280,
   },
   margin: {
     height: theme.spacing(3),
@@ -39,6 +39,7 @@ const marks = [
 export default function DiscreteSlider(props) {
   const classes = useStyles();
 
+  
   return (
     <div className={classes.root}>
       <Typography id="discrete-slider-custom" gutterBottom>
@@ -46,7 +47,7 @@ export default function DiscreteSlider(props) {
       </Typography>
       <br></br>
       <Slider
-        defaultValue={20}
+        defaultValue={70}
         getAriaValueText={props.valuetext}
         aria-labelledby="discrete-slider-custom"
         step={10}

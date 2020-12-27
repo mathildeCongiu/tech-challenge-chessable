@@ -1,7 +1,7 @@
 import "./App.css";
 import Board from "./components/Board";
 import DiscreteSlider from "./components/DiscreteSlider";
-import React, { useState } from "react";
+import React, { useState} from "react";
 import Game from "./components/Game";
 import Learn from "./components/Learn";
 
@@ -44,7 +44,7 @@ function App() {
           {size < 10 ? (
             <p className= "error-message">
               Oups, it seems too small, make the board bigger by using the
-              slider{" "}
+              slider.
             </p>
           ) : (
             <div className="full-board">
@@ -88,12 +88,16 @@ function App() {
 
           <DiscreteSlider valuetext={valuetext} />
         </div>
-        {size >= 80 ? null :  
+        {size >= 80 || size <10 ? null :  
         <div className= "right-part">
-        {play ?  <Game size= {size} userSquare={selectedSquare} playerHandler= {playerHandler}/> :         
+        {play ?  <Game showSelectedSquare={showSelectedSquare} size= {size} userSquare={selectedSquare} playerHandler= {playerHandler}/> :         
         <Learn size= {size} userSquare={selectedSquare} playerHandler= {playerHandler}></Learn>}
         </div>}
       </div>
+      <footer>
+        <p>Tech Challenge - chessable</p>
+        <p>Mathilde Congiu</p>
+      </footer>
     </div>
   );
 }

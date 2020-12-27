@@ -167,8 +167,6 @@ button {
 .board {
   display:flex;
   flex-direction: column;
-  /* width: 300px;
-  height: 300px; */
   border: 2px solid grey;
   resize: both;
   overflow: auto;
@@ -197,9 +195,9 @@ p {
 .coordinates {
   display:flex;
   flex-direction: row;
-  justify-content: space-around;
-  /* margin-right: 3px; */
+  justify-content: space-evenly;
   width: 100%;
+  margin: 2px 0 0 8px
 }
 
 .show {
@@ -248,4 +246,54 @@ h2 {
 
 .error-message {
   margin-bottom: 30px;
+}
+
+footer {
+  height: 70px;
+  width: 100%;
+  border-top: solid 1px grey;
+  position: relative;
+  bottom: 0;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .full-content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    justify-content: space-evenly;
+  }
+
+  .coordinates, .numbers {
+    font-size: 0.5em
+  }
+  .right-part {
+    height: 50%;
+    min-width: 30%;
+    margin-top: 30px
+  }
+
+  .main-container {
+    margin: 0
+  }
+  .board {
+    margin-bottom : 0px
+  }
+  button {
+    width: 90px;
+    height: 25px;
+    font-size: 0.6em;
+  }
+
+
 }
