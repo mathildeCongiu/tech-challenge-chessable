@@ -91,7 +91,7 @@ function App() {
         {size >= 80 ? null :  
         <div className= "right-part">
         {play ?  <Game size= {size} userSquare={selectedSquare} playerHandler= {playerHandler}/> :         
-        <Learn size= {size} selectedSquare={selectedSquare} playerHandler= {playerHandler}></Learn>}
+        <Learn size= {size} userSquare={selectedSquare} playerHandler= {playerHandler}></Learn>}
         </div>}
       </div>
     </div>

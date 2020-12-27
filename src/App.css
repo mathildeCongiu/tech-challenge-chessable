@@ -222,6 +222,7 @@ p {
 
 .learn h2 {
   font-size: 1.5vw;
+  font-weight: bold;
 }
 
 .learn p, .learn h3 {
@@ -229,7 +230,8 @@ p {
 }
 
 .learn span {
-  color: var(--blue)
+  color: var(--blue);
+  font-weight: bold;
 }
 
 .right-part {

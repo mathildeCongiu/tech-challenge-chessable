@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 function Line(props) {
     let numbersArray = ["a","b" , "c","d" ,"e" , "f","g" ,"h" ];
