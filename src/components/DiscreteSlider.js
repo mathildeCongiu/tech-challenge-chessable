@@ -47,21 +47,24 @@ export default function DiscreteSlider(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Typography id="discrete-slider-custom" gutterBottom>
-        Choose the size you like best
-      </Typography>
-      <br></br>
-      <Slider
-        //key solves the bug of uncontrolled component on Material-UI.
-        key={generateDefaultValue()}
-        defaultValue={generateDefaultValue()}
-        getAriaValueText={props.valuetext}
-        aria-labelledby="discrete-slider-custom"
-        step={10}
-        valueLabelDisplay="auto"
-        marks={marks}
-      />
+    <div className= "slider">
+      <div className={classes.root}>
+        {/* <Typography id="discrete-slider-custom" gutterBottom>
+          Choose the size you like best
+        </Typography> */}
+        {/* <br></br> */}
+        <h2> Resize Me!</h2>
+        <Slider
+          //key solves the bug of uncontrolled component on Material-UI.
+          key={generateDefaultValue()}
+          defaultValue={generateDefaultValue()}
+          getAriaValueText={props.valuetext}
+          aria-labelledby="discrete-slider-custom"
+          step={10}
+          valueLabelDisplay="auto"
+          marks={marks}
+        />
+      </div>
     </div>
   );
 }

@@ -35,10 +35,17 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <li onClick={() => setPlay(false)}> Discover</li>
-        <li onClick={() => setPlay(true)}>Play</li>
+        <div className= "nav-left">
+          <img src="/logo.svg" alt="logo"/>
+          <li>Boardable</li>
+        </div>
+        <div className= "nav-right">
+          <li onClick={() => setPlay(false)}> Discover</li>
+          <li onClick={() => setPlay(true)}>Play</li>
+        </div>
       </nav>
       <h1>Play my board!</h1>
+      <DiscreteSlider valuetext={valuetext} className="slider" />
       <div className="full-content">
         <div className="main-container">
           {size < 10 ? (
@@ -85,10 +92,8 @@ function App() {
               Show Coordinates
             </button>
           )}
-
-          <DiscreteSlider valuetext={valuetext} />
         </div>
-        {size >= 80 || size < 15 ? <p className= "warning">*Please, make the board a bit smaller to play or learn</p> : (
+        {size >= 80 || size < 15 ? null : (
           <div className="right-part">
             {play ? (
               <Game
@@ -106,6 +111,11 @@ function App() {
             )}
           </div>
         )}
+        {size >= 80 ? (
+          <p className="warning">
+            *Please, make the board a bit smaller to play or learn
+          </p>
+        ) : null}
       </div>
       <footer>
         <p>Tech Challenge - chessable</p>

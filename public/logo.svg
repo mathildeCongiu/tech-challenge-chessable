@@ -171,19 +171,15 @@
           </g>
         </g>
       </g>
-      <g id="Tracé_1" data-name="Tracé 1" transform="translate(327.786 438.271) rotate(1)" fill="#fff">
-        <path d="M 20.06814765930176 19.31436920166016 L 1.194972038269043 19.31436920166016 L 19.7994327545166 0.4411932826042175 L 20.06814765930176 19.31436920166016 Z" stroke="none"/>
-        <path d="M 19.31649780273438 1.643337249755859 L 2.389945983886719 18.81436920166016 L 19.56097793579102 18.81436920166016 L 19.31649780273438 1.643337249755859 M 20.28236961364746 -0.7609500885009766 L 20.57531929016113 19.81436920166016 L -1.9073486328125e-06 19.81436920166016 L 20.28236961364746 -0.7609500885009766 Z" stroke="none" fill="#707070"/>
-      </g>
     </g>
-    <path id="Tracé_2" data-name="Tracé 2" d="M0,0,270,270" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-width="4"/>
+    <path id="Tracé_2" data-name="Tracé 2" d="M0,0,270,270" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-width="10"/>
     <g id="Groupe_4" data-name="Groupe 4">
-      <line id="Ligne_2" data-name="Ligne 2" y1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="4"/>
-      <line id="Ligne_3" data-name="Ligne 3" x1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="4"/>
+      <line id="Ligne_2" data-name="Ligne 2" y1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="7"/>
+      <line id="Ligne_3" data-name="Ligne 3" x1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="7"/>
     </g>
     <g id="Groupe_5" data-name="Groupe 5" transform="matrix(-0.999, 0.035, -0.035, -0.999, 361.043, 365.027)">
-      <line id="Ligne_2-2" data-name="Ligne 2" y1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="4"/>
-      <line id="Ligne_3-2" data-name="Ligne 3" x1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="4"/>
+      <line id="Ligne_2-2" data-name="Ligne 2" y1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="7"/>
+      <line id="Ligne_3-2" data-name="Ligne 3" x1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="7"/>
     </g>
   </g>
 </svg>
