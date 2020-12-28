@@ -1,7 +1,7 @@
 import "./App.css";
 import Board from "./components/Board";
 import DiscreteSlider from "./components/DiscreteSlider";
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Game from "./components/Game";
 import Learn from "./components/Learn";
 
@@ -29,20 +29,20 @@ function App() {
   };
 
   const playerHandler = (bool) => {
-    setPlay(bool)
-  }
+    setPlay(bool);
+  };
 
   return (
     <div className="App">
       <nav>
-        <li onClick= {() => setPlay(false)}> Discover</li>
-        <li onClick= {() => setPlay(true)}>Play</li>
+        <li onClick={() => setPlay(false)}> Discover</li>
+        <li onClick={() => setPlay(true)}>Play</li>
       </nav>
       <h1>Play my board!</h1>
       <div className="full-content">
         <div className="main-container">
           {size < 10 ? (
-            <p className= "error-message">
+            <p className="error-message">
               Oups, it seems too small, make the board bigger by using the
               slider.
             </p>
@@ -88,11 +88,24 @@ function App() {
 
           <DiscreteSlider valuetext={valuetext} />
         </div>
-        {size >= 80 || size <10 ? null :  
-        <div className= "right-part">
-        {play ?  <Game showSelectedSquare={showSelectedSquare} size= {size} userSquare={selectedSquare} playerHandler= {playerHandler}/> :         
-        <Learn size= {size} userSquare={selectedSquare} playerHandler= {playerHandler}></Learn>}
-        </div>}
+        {size >= 80 || size < 10 ? null : (
+          <div className="right-part">
+            {play ? (
+              <Game
+                showSelectedSquare={showSelectedSquare}
+                size={size}
+                userSquare={selectedSquare}
+                playerHandler={playerHandler}
+              />
+            ) : (
+              <Learn
+                size={size}
+                userSquare={selectedSquare}
+                playerHandler={playerHandler}
+              ></Learn>
+            )}
+          </div>
+        )}
       </div>
       <footer>
         <p>Tech Challenge - chessable</p>

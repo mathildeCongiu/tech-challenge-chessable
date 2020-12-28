@@ -39,7 +39,15 @@ const marks = [
 export default function DiscreteSlider(props) {
   const classes = useStyles();
 
-  
+  const generateDefaultValue = () => {
+      if(window.innerWidth < 700) {
+        return window.innerWidth * 0.2
+      }
+      else {
+        return window.innerWidth * 0.02
+      }
+  }
+
   return (
     <div className={classes.root}>
       <Typography id="discrete-slider-custom" gutterBottom>
@@ -47,7 +55,7 @@ export default function DiscreteSlider(props) {
       </Typography>
       <br></br>
       <Slider
-        defaultValue={70}
+        defaultValue={generateDefaultValue}
         getAriaValueText={props.valuetext}
         aria-labelledby="discrete-slider-custom"
         step={10}

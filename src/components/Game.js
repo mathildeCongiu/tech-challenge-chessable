@@ -28,9 +28,9 @@ export default function Game(props) {
       {userSelectedSquare? <div>
         <p> You selected: <span>{userSelectedSquare}</span></p>
       {userSelectedSquare === randomSquare ? (
-        <p>Great ! It's correct</p>
+        <p className= "feedback-user">Great ! It's correct</p>
       ) : (
-        <p> Try again</p>
+        <p className= "feedback-user bad-answer"> Try again</p>
       )}
 
 
