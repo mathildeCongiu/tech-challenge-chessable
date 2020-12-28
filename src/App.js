@@ -108,12 +108,14 @@ function App() {
               <Game
                 showSelectedSquare={showSelectedSquare}
                 size={size}
+                unit= {unit}
                 userSquare={selectedSquare}
                 playerHandler={playerHandler}
               />
             ) : (
               <Learn
                 size={size}
+                unit= {unit}
                 userSquare={selectedSquare}
                 playerHandler={playerHandler}
               ></Learn>

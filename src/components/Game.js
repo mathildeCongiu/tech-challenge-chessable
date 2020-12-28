@@ -20,7 +20,7 @@ export default function Game(props) {
   }, [props.userSquare]);
 
   return (
-    <div className="learn" style={{ minHeight: `${props.size}vw` }}>
+    <div className="learn" style={{ minHeight: `${props.size}${props.unit}` }}>
       <h2> PLAYING MODE</h2>
       <h3>Select the square indicated below</h3>
       <button onClick={() => generateRandomSquare()}>Start !</button>
