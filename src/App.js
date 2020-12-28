@@ -82,13 +82,13 @@ function App() {
             </button>
           ) : (
             <button onClick={() => toggleCoordinatesHandler()}>
-              Show Corrdinates
+              Show Coordinates
             </button>
           )}
 
           <DiscreteSlider valuetext={valuetext} />
         </div>
-        {size >= 80 || size < 10 ? null : (
+        {size >= 80 || size < 15 ? <p className= "warning">*Please, make the board a bit smaller to play or learn</p> : (
           <div className="right-part">
             {play ? (
               <Game

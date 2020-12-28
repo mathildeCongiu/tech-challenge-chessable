@@ -20,13 +20,13 @@ export default function Game(props) {
     setRandomSquare(generatedSquare);
   };
   return (
-    <div className="learn" style= {{height: `${props.size}vw`, width: `${props.size}vw`}}>
+    <div className="learn" style= {{minHeight: `${props.size}vw`}}>
       <h2> PLAYING MODE</h2>
       <button onClick={() => generateRandomSquare()}>Start !</button>
       {randomSquare ? 
       <p>Find and click: <span>{randomSquare}</span></p> : null }
       {userSelectedSquare? <div>
-        <p> You selected: <span>{userSelectedSquare}</span></p>
+        <p>You selected: <span>{userSelectedSquare}</span></p>
       {userSelectedSquare === randomSquare ? (
         <p className= "feedback-user">Great ! It's correct</p>
       ) : (

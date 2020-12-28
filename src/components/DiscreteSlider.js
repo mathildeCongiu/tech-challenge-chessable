@@ -1,7 +1,7 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Slider from '@material-ui/core/Slider';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Slider from "@material-ui/core/Slider";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,38 +15,36 @@ const useStyles = makeStyles((theme) => ({
 const marks = [
   {
     value: 0,
-    label: 'None',
+    label: "None",
   },
   {
     value: 20,
-    label: 'Small',
+    label: "Small",
   },
   {
     value: 50,
-    label: 'Medium',
+    label: "Medium",
   },
   {
     value: 80,
-    label: 'Large',
+    label: "Large",
   },
   {
     value: 100,
-    label: 'X-large',
+    label: "X-large",
   },
 ];
 
+const generateDefaultValue = () => {
+  if (window.innerWidth < 700) {
+    return window.innerWidth * 0.2;
+  } else {
+    return window.innerWidth * 0.02;
+  }
+};
 
 export default function DiscreteSlider(props) {
   const classes = useStyles();
-
-  const generateDefaultValue = () => {
-      if(window.innerWidth < 700) {
-        return window.innerWidth * 0.2
-      }
-      else {
-        return window.innerWidth * 0.02
-      }
-  }
 
   return (
     <div className={classes.root}>
@@ -55,7 +53,9 @@ export default function DiscreteSlider(props) {
       </Typography>
       <br></br>
       <Slider
-        defaultValue={generateDefaultValue}
+        //key solves the bug of uncontrolled component on Material-UI.
+        key={generateDefaultValue()}
+        defaultValue={generateDefaultValue()}
         getAriaValueText={props.valuetext}
         aria-labelledby="discrete-slider-custom"
         step={10}
