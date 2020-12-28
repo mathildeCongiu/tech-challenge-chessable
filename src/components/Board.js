@@ -6,7 +6,7 @@ export default function Board(props) {
 
   return (
       
-    <div className="board" style={{width: `${props.size}vw`, height:`${props.size}vw`}}>
+    <div className="board" style={{width: `${props.size}${props.unit}`, height:`${props.size}${props.unit}`}}>
         {columns.map((square, index) => {
      
             return (index % 2 === 0 ? <Line key= {index} {...props} lineDirection= "line-even"  rank= {square} /> : <Line lineDirection="line-odd" {...props} key= {index} rank= {square}/>)

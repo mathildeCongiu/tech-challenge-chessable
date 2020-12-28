@@ -1,7 +1,7 @@
 import "./App.css";
 import Board from "./components/Board";
 import DiscreteSlider from "./components/DiscreteSlider";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Game from "./components/Game";
 import Learn from "./components/Learn";
 
@@ -10,6 +10,7 @@ function App() {
   const [toggleCoordinates, setToggleCoordinates] = useState("show");
   const [selectedSquare, setSelectedSquare] = useState();
   const [play, setPlay] = useState(false);
+  const [unit, setUnit] = useState();
 
   function valuetext(value) {
     setSize(value);
@@ -32,6 +33,14 @@ function App() {
     setPlay(bool);
   };
 
+  useEffect(() => { if (window.innerWidth < 700) {
+      setUnit("vw")
+    }
+    else {
+      setUnit("vh")
+    }
+  }, [])
+
   return (
     <div className="App">
       <nav>
@@ -44,18 +53,18 @@ function App() {
           <li onClick={() => setPlay(true)}>Play</li>
         </div>
       </nav>
-      <h1>Play my board!</h1>
+      {/* <h1>Play my board!</h1> */}
       <DiscreteSlider valuetext={valuetext} className="slider" />
       <div className="full-content">
         <div className="main-container">
-          {size < 10 ? (
+          {size < 15 ? (
             <p className="error-message">
               Oups, it seems too small, make the board bigger by using the
               slider.
             </p>
           ) : (
             <div className="full-board">
-              <div className="nb-board" style={{ height: `${size}vw` }}>
+              <div className="nb-board" style={{ height: `${size}${unit}` }}>
                 <div
                   className={`numbers ${toggleCoordinates}`}
                   style={{ height: "100%" }}
@@ -69,7 +78,7 @@ function App() {
                   <p>2</p>
                   <p>1</p>
                 </div>
-                <Board showSelectedSquare={showSelectedSquare} size={size} />
+                <Board showSelectedSquare={showSelectedSquare} size={size} unit = {unit}/>
               </div>
               <div className={`coordinates ${toggleCoordinates}`}>
                 <p>a</p>

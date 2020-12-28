@@ -35,10 +35,11 @@ const marks = [
 ];
 
 const generateDefaultValue = () => {
+  //Check if it is a mobile or a desktop so we can adjust the default value
   if (window.innerWidth < 700) {
-    return window.innerWidth * 0.2;
+    return window.innerWidth * 0.25;
   } else {
-    return window.innerHeight * 0.03;
+    return window.innerHeight * 0.07;
   }
 };
 
@@ -48,10 +49,7 @@ export default function DiscreteSlider(props) {
   return (
     <div className="slider">
       <div className={classes.root}>
-        {/* <Typography id="discrete-slider-custom" gutterBottom>
-          Choose the size you like best
-        </Typography> */}
-        {/* <br></br> */}
+
         <h2> Resize Me!</h2>
         <Slider
           //key solves the bug of uncontrolled component on Material-UI.
