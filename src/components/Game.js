@@ -4,11 +4,6 @@ export default function Game(props) {
   const [randomSquare, setRandomSquare] = useState();
   const [userSelectedSquare, setuserSelectedSquare] = useState(null);
 
-  useEffect(() => {
-    let userSquare = props.userSquare;
-    setuserSelectedSquare(userSquare);
-  }, [props.userSquare]);
-
   const generateRandomSquare = () => {
     props.showSelectedSquare(null);
     const letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
@@ -18,9 +13,17 @@ export default function Game(props) {
     }${Math.floor(Math.random() * (8 - 1) + 1)}`;
     setRandomSquare(generatedSquare);
   };
+
+  useEffect(() => {
+    let userSquare = props.userSquare;
+    setuserSelectedSquare(userSquare);
+  }, [props.userSquare]);
+
+  
   return (
     <div className="learn" style={{ minHeight: `${props.size}vw` }}>
       <h2> PLAYING MODE</h2>
+      <h3>Select the square indicated below</h3>
       <button onClick={() => generateRandomSquare()}>Start !</button>
       {randomSquare ? (
         <p>
