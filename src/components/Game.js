@@ -19,7 +19,6 @@ export default function Game(props) {
     setuserSelectedSquare(userSquare);
   }, [props.userSquare]);
 
-  
   return (
     <div className="learn" style={{ minHeight: `${props.size}vw` }}>
       <h2> PLAYING MODE</h2>

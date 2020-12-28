@@ -172,12 +172,12 @@
         </g>
       </g>
     </g>
-    <path id="Tracé_2" data-name="Tracé 2" d="M0,0,270,270" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-width="10"/>
-    <g id="Groupe_4" data-name="Groupe 4">
+    <path id="Tracé_2" data-name="Tracé 2" d="M0,0,270,270" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-width="15"/>
+    <g id="Groupe_4" data-name="Groupe 4" transform="translate(-1 -1)">
       <line id="Ligne_2" data-name="Ligne 2" y1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="7"/>
       <line id="Ligne_3" data-name="Ligne 3" x1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="7"/>
     </g>
-    <g id="Groupe_5" data-name="Groupe 5" transform="matrix(-0.999, 0.035, -0.035, -0.999, 361.043, 365.027)">
+    <g id="Groupe_5" data-name="Groupe 5" transform="matrix(-0.999, 0.035, -0.035, -0.999, 363.043, 366.027)">
       <line id="Ligne_2-2" data-name="Ligne 2" y1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="7"/>
       <line id="Ligne_3-2" data-name="Ligne 3" x1="22" transform="translate(44.5 48.5)" fill="none" stroke="#464545" stroke-linecap="round" stroke-width="7"/>
     </g>

@@ -215,6 +215,7 @@ h2 {
 }
 
 button {
+  width: 200px;
   border-radius: 20px;
   background-color: var(--blue);
   color: white;
@@ -222,6 +223,7 @@ button {
   border: none;
   margin-bottom: 20px;
   font-size: 1.2vw;
+  padding: 0 10px;
 }
 
 p {

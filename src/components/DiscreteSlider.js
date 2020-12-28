@@ -38,7 +38,7 @@ const generateDefaultValue = () => {
   if (window.innerWidth < 700) {
     return window.innerWidth * 0.2;
   } else {
-    return window.innerWidth * 0.02;
+    return window.innerHeight * 0.03;
   }
 };
 
@@ -46,7 +46,7 @@ export default function DiscreteSlider(props) {
   const classes = useStyles();
 
   return (
-    <div className= "slider">
+    <div className="slider">
       <div className={classes.root}>
         {/* <Typography id="discrete-slider-custom" gutterBottom>
           Choose the size you like best
