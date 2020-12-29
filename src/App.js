@@ -50,7 +50,7 @@ function App() {
           <li onClick={() => setPlay(false)}>Boardable</li>
         </div>
         <div className="nav-right">
-          <li onClick={() => setPlay(false)}> Discover</li>
+          <li onClick={() => setPlay(false)}> Learn</li>
           <li onClick={() => setPlay(true)}>Play</li>
         </div>
       </nav>
