@@ -49,7 +49,7 @@ function App() {
       <nav>
         <div className="nav-left">
           <img src="/logo.svg" alt="logo" />
-          <li>Boardable</li>
+          <li onClick={() => setPlay(false)}>Boardable</li>
         </div>
         <div className="nav-right">
           <li onClick={() => setPlay(false)}> Discover</li>

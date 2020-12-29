@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
 
@@ -55,7 +55,7 @@ export default function DiscreteSlider(props) {
           //key solves the bug of uncontrolled component on Material-UI.
           key={generateDefaultValue()}
           defaultValue={generateDefaultValue()}
-          getAriaValueText={(props.valuetext)}
+          getAriaValueText={props.valuetext}
           aria-labelledby="discrete-slider-custom"
           step={10}
           valueLabelDisplay="auto"
