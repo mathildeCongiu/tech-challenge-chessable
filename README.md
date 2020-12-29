@@ -20,4 +20,4 @@ Boardable is a responsive app that enables to play with an empty chessboard: the
 
 ## LINKS
 
-[SandBox](https://lgtun.csb.app/ 
+[SandBox](https://lgtun.csb.app/)
