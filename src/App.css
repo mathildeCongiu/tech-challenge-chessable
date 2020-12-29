@@ -148,6 +148,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 /* Nav */
@@ -219,7 +220,7 @@ button {
   border-radius: 20px;
   background-color: var(--blue);
   color: white;
-  height: 2vw;
+  height: 35px;
   border: none;
   margin-bottom: 20px;
   font-size: 1.2vw;
@@ -342,6 +343,10 @@ p {
   box-shadow: 1px 1px 16px -6px grey;
 }
 
+.column-style {
+  display: block;
+}
+
 .learn {
   display: flex;
   flex-direction: column;
@@ -449,9 +454,6 @@ footer {
   }
   .learn p {
     font-size: 1em;
-  }
-  .main-container {
-    margin: 0 5px;
   }
   .board {
     margin-bottom: 0px;

@@ -12,8 +12,9 @@ function App() {
   const [play, setPlay] = useState(false);
   const [unit, setUnit] = useState();
 
-  function valuetext(value) {
-    setSize(value);
+  const valuetext = (value) => {
+    //The -10 value below avoids the board to touch the left and right boards by defining a maximum of 90vw instead of 100. 
+    setSize(value-10);
     return value;
   }
 
@@ -33,13 +34,15 @@ function App() {
     setPlay(bool);
   };
 
-  useEffect(() => { if (window.innerWidth < 700) {
-      setUnit("vw")
+
+  useEffect(() => {
+    if (window.innerWidth < 700) {
+      setUnit("vw");
+    } else {
+      setUnit("vh");
     }
-    else {
-      setUnit("vh")
-    }
-  }, [])
+  }, []);
+
 
   return (
     <div className="App">
@@ -53,7 +56,6 @@ function App() {
           <li onClick={() => setPlay(true)}>Play</li>
         </div>
       </nav>
-      {/* <h1>Play my board!</h1> */}
       <DiscreteSlider valuetext={valuetext} className="slider" />
       <div className="full-content">
         <div className="main-container">
@@ -78,7 +80,11 @@ function App() {
                   <p>2</p>
                   <p>1</p>
                 </div>
-                <Board showSelectedSquare={showSelectedSquare} size={size} unit = {unit}/>
+                <Board
+                  showSelectedSquare={showSelectedSquare}
+                  size={size}
+                  unit={unit}
+                />
               </div>
               <div className={`coordinates ${toggleCoordinates}`}>
                 <p>a</p>
@@ -102,31 +108,25 @@ function App() {
             </button>
           )}
         </div>
-        {size >= 80 || size < 15 ? null : (
-          <div className="right-part">
-            {play ? (
-              <Game
-                showSelectedSquare={showSelectedSquare}
-                size={size}
-                unit= {unit}
-                userSquare={selectedSquare}
-                playerHandler={playerHandler}
-              />
-            ) : (
-              <Learn
-                size={size}
-                unit= {unit}
-                userSquare={selectedSquare}
-                playerHandler={playerHandler}
-              ></Learn>
-            )}
-          </div>
-        )}
-        {size >= 80 && window.innerWidth < 700 ? (
-          <p className="warning">
-            *Please, make the board a bit smaller to play or learn
-          </p>
-        ) : null}
+        {size < 15 ? null : 
+        <div className="right-part">
+          {play ? (
+            <Game
+              showSelectedSquare={showSelectedSquare}
+              size={size}
+              unit={unit}
+              userSquare={selectedSquare}
+              playerHandler={playerHandler}
+            />
+          ) : (
+            <Learn
+              size={size}
+              unit={unit}
+              userSquare={selectedSquare}
+              playerHandler={playerHandler}
+            ></Learn>
+          )}
+        </div>}
       </div>
       <footer>
         <p>Tech Challenge - chessable</p>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
 
@@ -37,15 +37,15 @@ const marks = [
 const generateDefaultValue = () => {
   //Check if it is a mobile or a desktop so we can adjust the default value
   if (window.innerWidth < 700) {
-    return window.innerWidth * 0.25;
+    return window.innerWidth * 0.3;
   } else {
-    return window.innerHeight * 0.07;
+    return window.innerHeight * 0.08;
   }
 };
 
 export default function DiscreteSlider(props) {
   const classes = useStyles();
-
+  
   return (
     <div className="slider">
       <div className={classes.root}>
@@ -55,7 +55,7 @@ export default function DiscreteSlider(props) {
           //key solves the bug of uncontrolled component on Material-UI.
           key={generateDefaultValue()}
           defaultValue={generateDefaultValue()}
-          getAriaValueText={props.valuetext}
+          getAriaValueText={(props.valuetext)}
           aria-labelledby="discrete-slider-custom"
           step={10}
           valueLabelDisplay="auto"
