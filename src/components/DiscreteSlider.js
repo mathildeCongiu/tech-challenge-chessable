@@ -45,11 +45,10 @@ const generateDefaultValue = () => {
 
 export default function DiscreteSlider(props) {
   const classes = useStyles();
-  
+
   return (
     <div className="slider">
       <div className={classes.root}>
-
         <h2> Resize Me!</h2>
         <Slider
           //key solves the bug of uncontrolled component on Material-UI.

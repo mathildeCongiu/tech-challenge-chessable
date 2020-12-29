@@ -13,10 +13,10 @@ function App() {
   const [unit, setUnit] = useState();
 
   const valuetext = (value) => {
-    //The -10 value below avoids the board to touch the left and right boards by defining a maximum of 90vw instead of 100. 
-    setSize(value-10);
+    //The -10 value below avoids the board to touch the left and right boards by defining a maximum of 90vw instead of 100.
+    setSize(value - 10);
     return value;
-  }
+  };
 
   const showSelectedSquare = (selectedSquare) => {
     setSelectedSquare(selectedSquare);
@@ -34,7 +34,6 @@ function App() {
     setPlay(bool);
   };
 
-
   useEffect(() => {
     if (window.innerWidth < 700) {
       setUnit("vw");
@@ -42,7 +41,6 @@ function App() {
       setUnit("vh");
     }
   }, []);
-
 
   return (
     <div className="App">
@@ -108,25 +106,26 @@ function App() {
             </button>
           )}
         </div>
-        {size < 15 ? null : 
-        <div className="right-part">
-          {play ? (
-            <Game
-              showSelectedSquare={showSelectedSquare}
-              size={size}
-              unit={unit}
-              userSquare={selectedSquare}
-              playerHandler={playerHandler}
-            />
-          ) : (
-            <Learn
-              size={size}
-              unit={unit}
-              userSquare={selectedSquare}
-              playerHandler={playerHandler}
-            ></Learn>
-          )}
-        </div>}
+        {size < 15 ? null : (
+          <div className="right-part">
+            {play ? (
+              <Game
+                showSelectedSquare={showSelectedSquare}
+                size={size}
+                unit={unit}
+                userSquare={selectedSquare}
+                playerHandler={playerHandler}
+              />
+            ) : (
+              <Learn
+                size={size}
+                unit={unit}
+                userSquare={selectedSquare}
+                playerHandler={playerHandler}
+              ></Learn>
+            )}
+          </div>
+        )}
       </div>
       <footer>
         <p>Tech Challenge - chessable</p>
