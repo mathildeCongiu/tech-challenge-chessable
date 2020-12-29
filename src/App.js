@@ -35,6 +35,7 @@ function App() {
   };
 
   useEffect(() => {
+    //We detect if the user is on desktop or on mobile to adapt the 100%' size of the boarder to the width for mobile/tablet and to height for desktop
     if (window.innerWidth < 700) {
       setUnit("vw");
     } else {
